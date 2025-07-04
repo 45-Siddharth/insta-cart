@@ -1,0 +1,115 @@
+.specific-product-background {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.specific-product-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.specific-product-image-container {
+  width: 50%;
+  padding-left: 170px;
+  padding-right: 30px;
+}
+.specific-image {
+  width: 100%;
+  border-radius: 15px;
+}
+.specific-product-details {
+  width: 40%;
+  padding-right: 170px;
+}
+.product-title {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 40px;
+}
+.price {
+  color: #171f46;
+  font-family: 'Roboto';
+  font-size: 25px;
+}
+.description {
+  color: #616e7c;
+  font-family: 'Roboto';
+  font-size: 19px;
+}
+.side-head {
+  color: #1e293b;
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin-right: 5px;
+}
+.side-value {
+  color: #475569;
+  font-family: 'Roboto';
+}
+.cart-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  padding: 7px;
+}
+.star-container {
+  display: flex;
+  align-items: center;
+  color: #171f46;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+.star-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b82f6;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+}
+.star-icon {
+  width: 30%;
+}
+.line {
+  border: 1px solid #cbced2;
+}
+.button-container {
+  display: flex;
+}
+.count-button {
+  border: 0px solid transparent;
+  background-color: transparent;
+  margin-right: 5px;
+}
+.quantity {
+  color: #1e293b;
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin-right: 5px;
+  font-size: 20px;
+}
+.similar-product-list-container {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.similar-products-container {
+  padding-left: 170px;
+}
+.loader-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
