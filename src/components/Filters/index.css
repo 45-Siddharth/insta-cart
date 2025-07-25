@@ -1,6 +1,4 @@
 .filters-group-container {
-  display:flex;
-  flex-direction:column;
   margin-top: 16px;
 }
 
@@ -48,7 +46,6 @@
   font-size: 18px;
   font-weight: 700;
   margin-top: 24px;
-  align-items:flex-start;
 }
 
 @media screen and (min-width: 768px) {
@@ -77,13 +74,11 @@
   color: #64748b;
   font-family: 'Roboto';
   font-size: 16px;
-  align-self:flex-start;
 }
 
 @media screen and (min-width: 768px) {
   .category-name {
     font-size: 18px;
-    align-self:flex-start;
   }
 }
 
@@ -98,8 +93,6 @@
   font-weight: 700;
   margin-top: 32px;
   margin-bottom: 18px;
-  padding-left:0px;
-  align-self:flex-start;
 }
 
 .ratings-list {
@@ -108,17 +101,18 @@
 
 .rating-item {
   display: flex;
+  align-items: center;
   margin-bottom: 12px;
   cursor: pointer;
 }
 
-.rating-image {
+.rating-img {
   max-width: 152px;
   height: 20px;
 }
 
 @media screen and (min-width: 768px) {
-  .rating-image {
+  .rating-img {
     height: 24px;
   }
 }
@@ -158,7 +152,6 @@
   margin-top: 16px;
   outline: none;
   cursor: pointer;
-  align-self:flex-start;
 }
 
 @media screen and (min-width: 768px) {

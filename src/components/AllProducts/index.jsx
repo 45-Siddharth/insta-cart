@@ -122,42 +122,23 @@ class AllProducts extends Component {
     }
   }
 
-  changeSortby = activeOptionId => {
-    this.setState({activeOptionId}, this.getProducts)
-  }
-
-  clearFilters = () => {
-    this.setState(
-      {
-        searchInput: '',
-        activeCategoryId: '',
-        activeRatingId: '',
-      },
-      this.getProducts,
-    )
-  }
-
-  changeRating = activeRatingId => {
-    this.setState({activeRatingId}, this.getProducts)
-  }
-
-  changeCategory = activeCategoryId => {
-    this.setState({activeCategoryId}, this.getProducts)
-  }
-
-  enterSearchInput = () => {
-    this.getProducts()
-  }
-
-  changeSearchInput = searchInput => {
-    this.setState({searchInput})
-  }
+  renderLoadingView = () => (
+    <div className="products-loader-container">
+      <ThreeDots
+      height="50"
+      width="50"
+      color="#0b69ff"
+      ariaLabel="three-dots-loading"
+      visible={true}
+    />
+    </div>
+  )
 
   renderFailureView = () => (
     <div className="products-error-view-container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-products-error-view.png"
-        alt="products failure"
+        alt="all-products-error"
         className="products-failure-img"
       />
       <h1 className="product-failure-heading-text">
@@ -168,6 +149,10 @@ class AllProducts extends Component {
       </p>
     </div>
   )
+
+  changeSortby = activeOptionId => {
+    this.setState({activeOptionId}, this.getProducts)
+  }
 
   renderProductsListView = () => {
     const {productsList, activeOptionId} = this.state
@@ -201,19 +186,6 @@ class AllProducts extends Component {
     )
   }
 
-  renderLoadingView = () => (
-    <div className="products-loader-container">
-      <ThreeDots
-        height="80"
-        width="80"
-        radius="9"
-        color="blue"
-        ariaLabel="three-dots-loading"
-        visible={true}
-      />
-    </div>
-  )
-
   renderAllProducts = () => {
     const {apiStatus} = this.state
 
@@ -227,6 +199,33 @@ class AllProducts extends Component {
       default:
         return null
     }
+  }
+
+  clearFilters = () => {
+    this.setState(
+      {
+        searchInput: '',
+        activeCategoryId: '',
+        activeRatingId: '',
+      },
+      this.getProducts,
+    )
+  }
+
+  changeRating = activeRatingId => {
+    this.setState({activeRatingId}, this.getProducts)
+  }
+
+  changeCategory = activeCategoryId => {
+    this.setState({activeCategoryId}, this.getProducts)
+  }
+
+  enterSearchInput = () => {
+    this.getProducts()
+  }
+
+  changeSearchInput = searchInput => {
+    this.setState({searchInput})
   }
 
   render() {
